@@ -87,11 +87,79 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="btn-group col-12 col-sm-3 align-self-center" role="group">
-                    <a role="button" class="btn btn-block btn-warning nav-link" href="#reserveForm" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom"><strong>Reserve Table</strong></a>
+                    <!-- <a role="button" class="btn btn-block btn-warning nav-link" href="#reserveForm"><strong>Reserve Table</strong></a> -->
+                    <span class="btn btn-block btn-warning nav-link">
+                        <a data-toggle="modal" data-target="#reserveModal">
+                            <strong>Reserve Table</strong>
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- TODO: Move form to Reserve table Modal -->
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Reserve a Table
+                    </h4>
+                    <button class="close" type="button" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="reserveForm">
+                            <div class="form-group row">
+                                <label for="radio-num-of-guests" class="col-md-2 col-form-label">Number of Guests</label>
+                                <div class="col-md">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="radio-num-of-guests1" name="numOfGuests" class="form-check-input">
+                                        <label for="radio-num-of-guests1" class="form-check-label">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="radio-num-of-guests2" name="numOfGuests" class="form-check-input">
+                                        <label for="radio-num-of-guests2" class="form-check-label">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="radio-num-of-guests3" name="numOfGuests" class="form-check-input">
+                                        <label for="radio-num-of-guests3" class="form-check-label">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="radio-num-of-guests4" name="numOfGuests" class="form-check-input">
+                                        <label for="radio-num-of-guests4" class="form-check-label">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" id="radio-num-of-guests5" name="numOfGuests" class="form-check-input">
+                                        <label for="radio-num-of-guests5" class="form-check-label">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateAndTime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                                <div class="col-7 col-md-5">
+                                    <input type="date" class="form-control" id="date" name="date">
+                                </div>
+                                <div class="col-5 col-md-5">
+                                    <input type="time" class="form-control" id="time" name="time">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md">
+                                    <button class="btn btn-secondary btn-sm mr-1" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-primary btn-sm" type="submit">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -178,54 +246,6 @@
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
                         <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-content justify-content-center">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <div>
-                            <form id="reserveForm">
-                                <div class="form-group row">
-                                    <label for="radio-num-of-guests" class="col-md-3 col-form-label">Number of Guests</label>
-                                    <div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" id="radio-num-of-guests1" name="numOfGuests" class="form-check-input">
-                                            <label for="radio-num-of-guests1" class="form-check-label">1</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" id="radio-num-of-guests2" name="numOfGuests" class="form-check-input">
-                                            <label for="radio-num-of-guests2" class="form-check-label">2</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" id="radio-num-of-guests3" name="numOfGuests" class="form-check-input">
-                                            <label for="radio-num-of-guests3" class="form-check-label">3</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" id="radio-num-of-guests4" name="numOfGuests" class="form-check-input">
-                                            <label for="radio-num-of-guests4" class="form-check-label">4</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" id="radio-num-of-guests5" name="numOfGuests" class="form-check-input">
-                                            <label for="radio-num-of-guests5" class="form-check-label">5</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="dateAndTime" class="col-12 col-md-4 col-form-label">Date and Time</label>
-                                    <div class="col-7 col-md-5">
-                                        <input type="date" class="form-control" id="date" name="date">
-                                    </div>
-                                    <div class="col-5 col-md-3">
-                                        <input type="time" class="form-control" id="time" name="time">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
