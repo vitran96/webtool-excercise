@@ -139,6 +139,19 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="radio-section" class="col-md-2 col-form-label">Section</label>
+                                <div class="col-md">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success btn-sm active focus">
+                                          <input type="radio" name="sections" id="radio-section1" checked>Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger btn-sm">
+                                          <input type="radio" name="sections" id="radio-section2">Smoking
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="dateAndTime" class="col-12 col-md-2 col-form-label">Date and Time</label>
                                 <div class="col-7 col-md-5">
                                     <input type="date" class="form-control" id="date" name="date">
@@ -150,8 +163,10 @@
                             <div class="form-row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md">
-                                    <button class="btn btn-secondary btn-sm mr-1" type="button" data-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-primary btn-sm" type="submit">Reserve</button>
+                                    <div class="btn-group">
+                                        <button class="btn btn-secondary mr-1" type="button" data-dismiss="modal">Cancel</button>
+                                        <button class="btn btn-primary" type="submit">Reserve</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
