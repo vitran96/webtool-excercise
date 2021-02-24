@@ -87,7 +87,6 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="btn-group col-12 col-sm-3 align-self-center" role="group">
-                    <!-- <a role="button" class="btn btn-block btn-warning nav-link" href="#reserveForm"><strong>Reserve Table</strong></a> -->
                     <span class="btn btn-block btn-warning nav-link">
                         <a data-toggle="modal" data-target="#reserveModal">
                             <strong>Reserve Table</strong>
@@ -98,7 +97,6 @@
         </div>
     </header>
 
-    <!-- TODO: Move form to Reserve table Modal -->
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -324,6 +322,13 @@
     <script>
         $(document).ready(() => {
             $('[data-toggle="tooltip"]').tooltip();
+            $('#myCarousel').carousel({interval: 2000});
+            $('#carousel-pause').click(() => {
+                $('#myCarousel').carousel('pause');
+            })
+            $('#carousel-play').click(() => {
+                $('#myCarousel').carousel('cycle');
+            })
         })
     </script>
 
