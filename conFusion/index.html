@@ -213,14 +213,9 @@
                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <div class="btn-group" id="carouselBtn">
-                        <button class="btn btn-danger btn-small" id="carousel-pause">
-                            <span class="fa fa-pause"></span>
-                        </button>
-                        <button class="btn btn-danger btn-small" id="carousel-play">
-                            <span class="fa fa-play"></span>
-                        </button>
-                    </div>
+                    <button class="btn btn-danger btn-small" id="carouselBtn">
+                        <span class="fa fa-pause"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -321,15 +316,20 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(() => {
-            $('[data-toggle="tooltip"]').tooltip();
             $('#myCarousel').carousel({interval: 2000});
-            $('#carousel-pause').click(() => {
-                $('#myCarousel').carousel('pause');
+            $('#carouselBtn').click(() => {
+                if ($(carouselBtn).children("span").hasClass("fa-pause")) {
+                    $('#myCarousel').carousel('pause');
+                    $('#carouseBtn').children('span').removeClass('fa-pause');
+                    $('#carouseBtn').children('span').addClass('fa-play');
+                }
+                else if ($(carouselBtn).children("span").hasClass("fa-play")) {
+                    $('#myCarousel').carousel('cycle');
+                    $('#carouseBtn').children('span').removeClass('fa-play');
+                    $('#carouseBtn').children('span').addClass('fa-pause');
+                }
             })
-            $('#carousel-play').click(() => {
-                $('#myCarousel').carousel('cycle');
-            })
-        })
+        });
     </script>
 
 </body>
