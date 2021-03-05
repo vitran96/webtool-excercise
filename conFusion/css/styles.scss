@@ -75,3 +75,20 @@ body {
     position: absolute;
     bottom: 0px;
 }
+
+.modal-header {
+    background-color: $background-dark;
+    color: white;
+
+    .close {
+        color: $lt-gray;
+    }
+}
+
+.modal-body {
+    background-color: $background-pale;
+}
+
+#reserveBtn {
+    color: white;
+}
