@@ -1,6 +1,7 @@
-$(document).ready(() => {
+
+$(document).ready(function() {
     $('#myCarousel').carousel({interval: 2000});
-    $('#carouselBtn').click(() => {
+    $('#carouselBtn').click(function() {
         if ($("#carouselBtn").children("span").hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
             $("#carouselBtn").children("span").removeClass('fa-pause');
@@ -12,10 +13,12 @@ $(document).ready(() => {
             $("#carouselBtn").children("span").addClass('fa-pause');
         }
     });
-    $('#reserveBtn').click(() => {
+
+    $('#reserveBtn').click(function() {
         $('#reserveModal').modal('toggle');
     });
-    $('#loginBtn').click(() => {
+
+    $('#loginBtn').click(function() {
         $('#loginModal').modal('toggle');
     });
 });
